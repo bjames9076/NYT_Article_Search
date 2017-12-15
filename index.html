@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     
-    <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <title>Document</title>
 
@@ -25,10 +25,35 @@
             <div class="panel-body">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <label for="searchTerm">Search Term</label>
+                        <input type="text" class="form-control" id="searchTerm">
+                        <label for="numberToRetrieve">Number of Records to Retrieve:</label>
+                        <select class="form-control" id="numberToRetrieve">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                        <label for="startYear">Start Year (Optional):</label>
+                        <input type="text" class="form-control" id="startYear">
+                        <label for="endYear">End Year (Optional):</label>
+                        <input type="text" class="form-control" id="endYear">
                     </div>
                 </form>
+                <button type="button" onclick="search()" class="btn btn-primary btn-lg">Search</button>
+                <button type="button" onclick="clearResults()" class="btn btn-default btn-lg">Clear Results</button>
+            </div>
         </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Top Articles</div>
+            <div class="panel-body">
+                <div id="article1">1</div>
+                <div id="article2">2</div>
+                <div id="article3">3</div>
+                <div id="article4">4</div>
+                <div id="article5">5</div>
+            </div>
+        </div> 
 </body>
 </html>
